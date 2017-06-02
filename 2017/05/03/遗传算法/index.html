@@ -97,7 +97,7 @@
 <meta property="og:url" content="http://yoursite.com/2017/05/03/遗传算法/index.html">
 <meta property="og:site_name" content="Ignorant">
 <meta property="og:description" content="算法介绍基本思想遗传算法是一种迭代算法，实质上是一种搜索寻优技术——借助于自然遗传学的选择、复制、交叉、变异等，逐渐演化产生出越来越好的近似解。在每一代，根据问题域中个体的适应度大小，按照优胜劣汰和适者生存的原理，引导搜索过程向最优解逼近，最终产生出代表新的解集的群体，可以作为问题的近似最优解或满意解。 基本概念和术语1.演化代 算法的迭代步 2.个体 组成种群的每一个解称为一个个体，是遗传算法中">
-<meta property="og:updated_time" content="2017-05-05T13:27:52.187Z">
+<meta property="og:updated_time" content="2017-05-06T15:29:43.163Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="遗传算法">
 <meta name="twitter:description" content="算法介绍基本思想遗传算法是一种迭代算法，实质上是一种搜索寻优技术——借助于自然遗传学的选择、复制、交叉、变异等，逐渐演化产生出越来越好的近似解。在每一代，根据问题域中个体的适应度大小，按照优胜劣汰和适者生存的原理，引导搜索过程向最优解逼近，最终产生出代表新的解集的群体，可以作为问题的近似最优解或满意解。 基本概念和术语1.演化代 算法的迭代步 2.个体 组成种群的每一个解称为一个个体，是遗传算法中">
@@ -200,7 +200,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -210,7 +210,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -287,7 +287,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-03T21:05:19+08:00">
                 2017-05-03
@@ -328,7 +328,7 @@
 <h4 id="基本概念和术语"><a href="#基本概念和术语" class="headerlink" title="基本概念和术语"></a>基本概念和术语</h4><p>1.演化代</p>
 <p>算法的迭代步</p>
 <p>2.个体</p>
-<p>组成种群的每一个解称为一个个体，是遗传算法中用来模拟生物染色体的一定数目的二进制位串，常记为X~1~(t)，X~2~(t)，…，等。</p>
+<p>组成种群的每一个解称为一个个体，是遗传算法中用来模拟生物染色体的一定数目的二进制位串，常记为X$_1$(t)，X$_2$(t)，…，等。</p>
 <p>3.种群</p>
 <p>是由一定数量的个体组成的集合，也是所求解问题的多个解的集合，常记为P(t),t表示其代数，最初的种群即P(0)。</p>
 <p>4.种群规模</p>
@@ -387,7 +387,29 @@
 <p>符号编码方法是用一无数值意义而只有代码含义的符号集来表示个体的每个基因值。</p>
 <p>浮点数编码方法是用一个真实值变量的浮点数来表示个体的每个基因值，也就是直接在解的表现型上进行遗传操作。</p>
 <p>结构式编码是将问题的解表示成图、树或表等形式。</p>
-<h5 id="适应度函数"><a href="#适应度函数" class="headerlink" title="适应度函数"></a>适应度函数</h5>
+<h5 id="适应度函数"><a href="#适应度函数" class="headerlink" title="适应度函数"></a>适应度函数</h5><p>个体适应度是表示个体对环境的适应能力同时也是繁殖后代的能力。为了体现染色体每个个体的适应能力，我们引入适应度函数，它能对问题中的每一个染色体中的个体进行度量。常用到的适应度函数基本上有以下三种：</p>
+<p>(1)</p>
+<h5 id="遗传算子"><a href="#遗传算子" class="headerlink" title="遗传算子"></a>遗传算子</h5><p>1.个体选择</p>
+<p>从当前种群中选择适应度高和淘汰适应度低的个体的操作过程叫选择。选择操作的主要作用是避免有效基因的损失，其目的是以更大的概率使得优化的个体（或解）生存下来，从而提高计算效益和全局收敛性。</p>
+<p>(1)一般的比例选择方法：用正比于个体适配值的概率来选择相应的个体，是一种放回式随机采样的方法。比例选择的基本思想是：个体被选中的概率与它的适应度的大小成正比。设种群的大小为M，群体为p(t)，个体$X_i$ 的适应度大小为$F_i$ ，在一次选择中个体$X_i$被选中概率为p=$F<em>i$/ $$\sum</em>{i=1}^M F_i$$，在群体中选择M次，即产生新一代群体P(t+1)。</p>
+<p>(2)最佳个体保存方法：将群体中适应度最高的一些个体不进行任何交叉操作而直接复制到下一代，用它来替换本代群体中经过遗传操作后适应度最低的个体。此种选择操作有称复制。</p>
+<p>2.交叉</p>
+<p>遗传算法中的交叉操作的作用是组合出新的个体，方法是将相互配对的染色体按某种方式相互交换其部分基因。遗传算法区别于其他进化算法的重要特征是交叉运算，它在遗传算法中起着关键作用。</p>
+<p>交叉操作根据交叉算子将种群中的两个个体以一定的概率随机地在某些基因位进行基因交换，从而产生新的个体。其目的是获得下一代的优良个体，提高遗传算法的搜索能力，对于不同的编码方式，其交叉算子的设计有所不同，常用的交叉算子有：</p>
+<p>(1)二进制编码的交叉算子</p>
+<p>包括单点交叉、多点交叉和均匀交叉等。例如：</p>
+<p>交叉前个体：</p>
+<p>​                个体$A$：0110110010001110</p>
+<p>​                个体$B$：1011011011100101</p>
+<p>单点交叉：</p>
+<p>如随机选择的交叉位为第6位，则交叉后的个体为：</p>
+<p>​                个体$A^{‘}$：0110111011100101</p>
+<p>​                个体$B^{‘}$：1010010010001110</p>
+<p>多点交叉：</p>
+<p>如随机选择的交叉位为第6位和第10位，则交叉后的个体为：</p>
+<p>​                个体$A^{‘}$：0110111010001110</p>
+<p>​                个体$B^{‘}$：1010010011100101</p>
+
       
     </div>
 
@@ -428,6 +450,10 @@
       
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/05/27/对比POET和GET/" rel="next" title="对比GET和POST">
+                <i class="fa fa-chevron-left"></i> 对比GET和POST
+              </a>
             
           </div>
 
@@ -486,10 +512,10 @@
       
         <ul class="sidebar-nav motion-element">
           <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            Inhaltsverzeichnis
+            Table of Contents
           </li>
           <li class="sidebar-nav-overview" data-target="site-overview">
-            Übersicht
+            Overview
           </li>
         </ul>
       
@@ -509,8 +535,8 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">7</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
@@ -522,8 +548,8 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">tags</span>
               
             </div>
           
@@ -557,7 +583,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法介绍"><span class="nav-number">1.</span> <span class="nav-text">算法介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本思想"><span class="nav-number">1.0.1.</span> <span class="nav-text">基本思想</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念和术语"><span class="nav-number">1.0.2.</span> <span class="nav-text">基本概念和术语</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遗传算法的构成要素"><span class="nav-number">1.0.3.</span> <span class="nav-text">遗传算法的构成要素</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#遗传算法应用步骤"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">遗传算法应用步骤</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#编码表示"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">编码表示</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#适应度函数"><span class="nav-number">1.0.3.3.</span> <span class="nav-text">适应度函数</span></a></li></ol></li></ol></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#算法介绍"><span class="nav-number">1.</span> <span class="nav-text">算法介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#基本思想"><span class="nav-number">1.0.1.</span> <span class="nav-text">基本思想</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#基本概念和术语"><span class="nav-number">1.0.2.</span> <span class="nav-text">基本概念和术语</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#遗传算法的构成要素"><span class="nav-number">1.0.3.</span> <span class="nav-text">遗传算法的构成要素</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#遗传算法应用步骤"><span class="nav-number">1.0.3.1.</span> <span class="nav-text">遗传算法应用步骤</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#编码表示"><span class="nav-number">1.0.3.2.</span> <span class="nav-text">编码表示</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#适应度函数"><span class="nav-number">1.0.3.3.</span> <span class="nav-text">适应度函数</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#遗传算子"><span class="nav-number">1.0.3.4.</span> <span class="nav-text">遗传算子</span></a></li></ol></li></ol></li></ol></li></ol></div>
             
 
           </div>
@@ -589,7 +615,7 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">

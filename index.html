@@ -197,7 +197,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
             
-            Startseite
+            Home
           </a>
         </li>
       
@@ -207,7 +207,7 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            Archiv
+            Archives
           </a>
         </li>
       
@@ -240,6 +240,186 @@
           <div id="content" class="content">
             
   <section id="posts" class="posts-expand">
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/27/对比POET和GET/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Ignorant">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Ignorant">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2017/05/27/对比POET和GET/" itemprop="url">
+                  对比GET和POST
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-27T21:05:19+08:00">
+                2017-05-27
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><p>HTTP为“超文本传输协议”，用来保证客户机与服务器之间的通信。</p>
+<p>其工作方式是客户机与服务器之间的请求-应答协议。</p>
+<p>举例：客户端（浏览器）向服务器提交 HTTP 请求；服务器向客户端返回响应。响应包含关于请求的状态信息以及可能被请求的内容。</p>
+<h2 id="两种HTTP请求方法：GET和POST"><a href="#两种HTTP请求方法：GET和POST" class="headerlink" title="两种HTTP请求方法：GET和POST"></a>两种HTTP请求方法：GET和POST</h2><p>GET        从指定的资源请求数据</p>
+<p>post        向指定的资源提交要被处理的数据</p>
+<h3 id="GET与POST的对比"><a href="#GET与POST的对比" class="headerlink" title="GET与POST的对比"></a>GET与POST的对比</h3><table>
+<thead>
+<tr>
+<th style="text-align:center"></th>
+<th style="text-align:left">GET</th>
+<th style="text-align:left">POST</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">后退按钮/刷新</td>
+<td style="text-align:left">无害</td>
+<td style="text-align:left">数据会被重新提交（浏览器应该告知用户数据会被重新提交）。</td>
+</tr>
+<tr>
+<td style="text-align:center">书签</td>
+<td style="text-align:left">可收藏为书签</td>
+<td style="text-align:left">不可收藏为书签</td>
+</tr>
+<tr>
+<td style="text-align:center">编码类型</td>
+<td style="text-align:left">application/x-www-form-urlencoded</td>
+<td style="text-align:left">application/x-www-form-urlencoded 或 multipart/form-data。为二进制数据使用多重编码。</td>
+</tr>
+<tr>
+<td style="text-align:center">历史</td>
+<td style="text-align:left">参数保留在浏览器历史中。</td>
+<td style="text-align:left">参数不会保存在浏览器历史中。</td>
+</tr>
+<tr>
+<td style="text-align:center">对数据长度的限制</td>
+<td style="text-align:left">当发送数据时，GET 方法向 URL 添加数据；URL 的长度是受限制的（URL 的最大长度是 2048 个字符）。</td>
+<td style="text-align:left">没有限制。</td>
+</tr>
+<tr>
+<td style="text-align:center">对数据类型的限制</td>
+<td style="text-align:left">只允许 ASCII 字符。</td>
+<td style="text-align:left">没有限制。也允许二进制数据。</td>
+</tr>
+<tr>
+<td style="text-align:center">安全性</td>
+<td style="text-align:left">与 POST 相比，GET 的安全性较差，因为所发送的数据是 URL 的一部分。</td>
+<td style="text-align:left">POST 比 GET 更安全，因为参数不会被保存在浏览器历史或 web 服务器日志中。</td>
+</tr>
+<tr>
+<td style="text-align:center">可见性</td>
+<td style="text-align:left">数据在 URL 中对所有人都是可见的。</td>
+<td style="text-align:left">数据不会显示在 URL 中。</td>
+</tr>
+<tr>
+<td style="text-align:center">缓存</td>
+<td style="text-align:left">能被缓存</td>
+<td style="text-align:left">不能缓存</td>
+</tr>
+</tbody>
+</table>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
     
       
 
@@ -287,7 +467,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-03T21:05:19+08:00">
                 2017-05-03
@@ -330,7 +510,7 @@
 <h4 id="基本概念和术语"><a href="#基本概念和术语" class="headerlink" title="基本概念和术语"></a>基本概念和术语</h4><p>1.演化代</p>
 <p>算法的迭代步</p>
 <p>2.个体</p>
-<p>组成种群的每一个解称为一个个体，是遗传算法中用来模拟生物染色体的一定数目的二进制位串，常记为X~1~(t)，X~2~(t)，…，等。</p>
+<p>组成种群的每一个解称为一个个体，是遗传算法中用来模拟生物染色体的一定数目的二进制位串，常记为X$_1$(t)，X$_2$(t)，…，等。</p>
 <p>3.种群</p>
 <p>是由一定数量的个体组成的集合，也是所求解问题的多个解的集合，常记为P(t),t表示其代数，最初的种群即P(0)。</p>
 <p>4.种群规模</p>
@@ -389,7 +569,29 @@
 <p>符号编码方法是用一无数值意义而只有代码含义的符号集来表示个体的每个基因值。</p>
 <p>浮点数编码方法是用一个真实值变量的浮点数来表示个体的每个基因值，也就是直接在解的表现型上进行遗传操作。</p>
 <p>结构式编码是将问题的解表示成图、树或表等形式。</p>
-<h5 id="适应度函数"><a href="#适应度函数" class="headerlink" title="适应度函数"></a>适应度函数</h5>
+<h5 id="适应度函数"><a href="#适应度函数" class="headerlink" title="适应度函数"></a>适应度函数</h5><p>个体适应度是表示个体对环境的适应能力同时也是繁殖后代的能力。为了体现染色体每个个体的适应能力，我们引入适应度函数，它能对问题中的每一个染色体中的个体进行度量。常用到的适应度函数基本上有以下三种：</p>
+<p>(1)</p>
+<h5 id="遗传算子"><a href="#遗传算子" class="headerlink" title="遗传算子"></a>遗传算子</h5><p>1.个体选择</p>
+<p>从当前种群中选择适应度高和淘汰适应度低的个体的操作过程叫选择。选择操作的主要作用是避免有效基因的损失，其目的是以更大的概率使得优化的个体（或解）生存下来，从而提高计算效益和全局收敛性。</p>
+<p>(1)一般的比例选择方法：用正比于个体适配值的概率来选择相应的个体，是一种放回式随机采样的方法。比例选择的基本思想是：个体被选中的概率与它的适应度的大小成正比。设种群的大小为M，群体为p(t)，个体$X_i$ 的适应度大小为$F_i$ ，在一次选择中个体$X_i$被选中概率为p=$F<em>i$/ $$\sum</em>{i=1}^M F_i$$，在群体中选择M次，即产生新一代群体P(t+1)。</p>
+<p>(2)最佳个体保存方法：将群体中适应度最高的一些个体不进行任何交叉操作而直接复制到下一代，用它来替换本代群体中经过遗传操作后适应度最低的个体。此种选择操作有称复制。</p>
+<p>2.交叉</p>
+<p>遗传算法中的交叉操作的作用是组合出新的个体，方法是将相互配对的染色体按某种方式相互交换其部分基因。遗传算法区别于其他进化算法的重要特征是交叉运算，它在遗传算法中起着关键作用。</p>
+<p>交叉操作根据交叉算子将种群中的两个个体以一定的概率随机地在某些基因位进行基因交换，从而产生新的个体。其目的是获得下一代的优良个体，提高遗传算法的搜索能力，对于不同的编码方式，其交叉算子的设计有所不同，常用的交叉算子有：</p>
+<p>(1)二进制编码的交叉算子</p>
+<p>包括单点交叉、多点交叉和均匀交叉等。例如：</p>
+<p>交叉前个体：</p>
+<p>​                个体$A$：0110110010001110</p>
+<p>​                个体$B$：1011011011100101</p>
+<p>单点交叉：</p>
+<p>如随机选择的交叉位为第6位，则交叉后的个体为：</p>
+<p>​                个体$A^{‘}$：0110111011100101</p>
+<p>​                个体$B^{‘}$：1010010010001110</p>
+<p>多点交叉：</p>
+<p>如随机选择的交叉位为第6位和第10位，则交叉后的个体为：</p>
+<p>​                个体$A^{‘}$：0110111010001110</p>
+<p>​                个体$B^{‘}$：1010010011100101</p>
+
           
         
       
@@ -469,7 +671,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-29T12:16:29+08:00">
                 2017-04-29
@@ -598,7 +800,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-25T19:31:20+08:00">
                 2017-04-25
@@ -758,7 +960,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-08T17:05:19+08:00">
                 2017-04-08
@@ -884,7 +1086,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-04-06T12:05:46+08:00">
                 2017-04-06
@@ -1003,7 +1205,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-12T12:16:29+08:00">
                 2017-03-12
@@ -1209,7 +1411,7 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Veröffentlicht am</span>
+                <span class="post-meta-item-text">Posted on</span>
               
               <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-03-11T18:16:00+08:00">
                 2017-03-11
@@ -1354,8 +1556,8 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">7</span>
-                <span class="site-state-item-name">Artikel</span>
+                <span class="site-state-item-count">8</span>
+                <span class="site-state-item-name">posts</span>
               </a>
             </div>
           
@@ -1367,8 +1569,8 @@
             
             <div class="site-state-item site-state-tags">
               
-                <span class="site-state-item-count">6</span>
-                <span class="site-state-item-name">Tags</span>
+                <span class="site-state-item-count">7</span>
+                <span class="site-state-item-name">tags</span>
               
             </div>
           
@@ -1418,7 +1620,7 @@
 
 
 <div class="powered-by">
-  Erstellt mit  <a class="theme-link" href="https://hexo.io">Hexo</a>
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
 </div>
 
 <div class="theme-info">
