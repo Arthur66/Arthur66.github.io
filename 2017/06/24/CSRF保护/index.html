@@ -74,7 +74,7 @@
 <link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="html," />
+  <meta name="keywords" content="CSRF," />
 
 
 
@@ -90,17 +90,19 @@
 
 
 
-<meta name="description" content="HTTPHTTP为“超文本传输协议”，用来保证客户机与服务器之间的通信。 其工作方式是客户机与服务器之间的请求-应答协议。 举例：客户端（浏览器）向服务器提交 HTTP 请求；服务器向客户端返回响应。响应包含关于请求的状态信息以及可能被请求的内容。 两种HTTP请求方法：GET和POSTGET        从指定的资源请求数据 post        向指定的资源提交要被处理的数据 GET与PO">
-<meta name="keywords" content="html">
+<meta name="description" content="CSRF介绍CSRF（Cross-site request forgery）跨站请求伪造，是一种对网站的恶意利用。 CSRF攻击原理1.用户C打开浏览器，访问受信任网站A，输入用户名和密码请求登录网站A； 2.在用户信息通过验证后，网站A产生Cookie信息并返回给浏览器，此时用户登录网站A成功，可以正常发送请求到网站A； 3.用户未退出网站A之前，在同一浏览器中，打开一个TAB页访问网站B； 4">
+<meta name="keywords" content="CSRF">
 <meta property="og:type" content="article">
-<meta property="og:title" content="对比GET和POST">
-<meta property="og:url" content="http://yoursite.com/2017/05/27/对比POET和GET/index.html">
+<meta property="og:title" content="CSRF保护">
+<meta property="og:url" content="http://yoursite.com/2017/06/24/CSRF保护/index.html">
 <meta property="og:site_name" content="Ignorant">
-<meta property="og:description" content="HTTPHTTP为“超文本传输协议”，用来保证客户机与服务器之间的通信。 其工作方式是客户机与服务器之间的请求-应答协议。 举例：客户端（浏览器）向服务器提交 HTTP 请求；服务器向客户端返回响应。响应包含关于请求的状态信息以及可能被请求的内容。 两种HTTP请求方法：GET和POSTGET        从指定的资源请求数据 post        向指定的资源提交要被处理的数据 GET与PO">
-<meta property="og:updated_time" content="2017-05-31T15:01:59.654Z">
+<meta property="og:description" content="CSRF介绍CSRF（Cross-site request forgery）跨站请求伪造，是一种对网站的恶意利用。 CSRF攻击原理1.用户C打开浏览器，访问受信任网站A，输入用户名和密码请求登录网站A； 2.在用户信息通过验证后，网站A产生Cookie信息并返回给浏览器，此时用户登录网站A成功，可以正常发送请求到网站A； 3.用户未退出网站A之前，在同一浏览器中，打开一个TAB页访问网站B； 4">
+<meta property="og:image" content="http://www.h3c.com.cn/res/201208/28/20120828_1395003_image001_751467_30008_0.jpg">
+<meta property="og:updated_time" content="2017-06-24T03:23:32.271Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="对比GET和POST">
-<meta name="twitter:description" content="HTTPHTTP为“超文本传输协议”，用来保证客户机与服务器之间的通信。 其工作方式是客户机与服务器之间的请求-应答协议。 举例：客户端（浏览器）向服务器提交 HTTP 请求；服务器向客户端返回响应。响应包含关于请求的状态信息以及可能被请求的内容。 两种HTTP请求方法：GET和POSTGET        从指定的资源请求数据 post        向指定的资源提交要被处理的数据 GET与PO">
+<meta name="twitter:title" content="CSRF保护">
+<meta name="twitter:description" content="CSRF介绍CSRF（Cross-site request forgery）跨站请求伪造，是一种对网站的恶意利用。 CSRF攻击原理1.用户C打开浏览器，访问受信任网站A，输入用户名和密码请求登录网站A； 2.在用户信息通过验证后，网站A产生Cookie信息并返回给浏览器，此时用户登录网站A成功，可以正常发送请求到网站A； 3.用户未退出网站A之前，在同一浏览器中，打开一个TAB页访问网站B； 4">
+<meta name="twitter:image" content="http://www.h3c.com.cn/res/201208/28/20120828_1395003_image001_751467_30008_0.jpg">
 
 
 
@@ -128,13 +130,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/05/27/对比POET和GET/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/06/24/CSRF保护/"/>
 
 
 
 
 
-  <title>对比GET和POST | Ignorant</title>
+  <title>CSRF保护 | Ignorant</title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="">
@@ -253,7 +255,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/05/27/对比POET和GET/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/06/24/CSRF保护/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ignorant">
@@ -274,7 +276,7 @@
             
             
               
-                对比GET和POST
+                CSRF保护
               
             
           </h1>
@@ -289,8 +291,8 @@
               
                 <span class="post-meta-item-text">Veröffentlicht am</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-05-27T21:05:19+08:00">
-                2017-05-27
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-06-24T10:05:19+08:00">
+                2017-06-24
               </time>
             
 
@@ -324,67 +326,17 @@
       
 
       
-        <h2 id="HTTP"><a href="#HTTP" class="headerlink" title="HTTP"></a>HTTP</h2><p>HTTP为“超文本传输协议”，用来保证客户机与服务器之间的通信。</p>
-<p>其工作方式是客户机与服务器之间的请求-应答协议。</p>
-<p>举例：客户端（浏览器）向服务器提交 HTTP 请求；服务器向客户端返回响应。响应包含关于请求的状态信息以及可能被请求的内容。</p>
-<h2 id="两种HTTP请求方法：GET和POST"><a href="#两种HTTP请求方法：GET和POST" class="headerlink" title="两种HTTP请求方法：GET和POST"></a>两种HTTP请求方法：GET和POST</h2><p>GET        从指定的资源请求数据</p>
-<p>post        向指定的资源提交要被处理的数据</p>
-<h3 id="GET与POST的对比"><a href="#GET与POST的对比" class="headerlink" title="GET与POST的对比"></a>GET与POST的对比</h3><table>
-<thead>
-<tr>
-<th style="text-align:center"></th>
-<th style="text-align:left">GET</th>
-<th style="text-align:left">POST</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">后退按钮/刷新</td>
-<td style="text-align:left">无害</td>
-<td style="text-align:left">数据会被重新提交（浏览器应该告知用户数据会被重新提交）。</td>
-</tr>
-<tr>
-<td style="text-align:center">书签</td>
-<td style="text-align:left">可收藏为书签</td>
-<td style="text-align:left">不可收藏为书签</td>
-</tr>
-<tr>
-<td style="text-align:center">编码类型</td>
-<td style="text-align:left">application/x-www-form-urlencoded</td>
-<td style="text-align:left">application/x-www-form-urlencoded 或 multipart/form-data。为二进制数据使用多重编码。</td>
-</tr>
-<tr>
-<td style="text-align:center">历史</td>
-<td style="text-align:left">参数保留在浏览器历史中。</td>
-<td style="text-align:left">参数不会保存在浏览器历史中。</td>
-</tr>
-<tr>
-<td style="text-align:center">对数据长度的限制</td>
-<td style="text-align:left">当发送数据时，GET 方法向 URL 添加数据；URL 的长度是受限制的（URL 的最大长度是 2048 个字符）。</td>
-<td style="text-align:left">没有限制。</td>
-</tr>
-<tr>
-<td style="text-align:center">对数据类型的限制</td>
-<td style="text-align:left">只允许 ASCII 字符。</td>
-<td style="text-align:left">没有限制。也允许二进制数据。</td>
-</tr>
-<tr>
-<td style="text-align:center">安全性</td>
-<td style="text-align:left">与 POST 相比，GET 的安全性较差，因为所发送的数据是 URL 的一部分。</td>
-<td style="text-align:left">POST 比 GET 更安全，因为参数不会被保存在浏览器历史或 web 服务器日志中。</td>
-</tr>
-<tr>
-<td style="text-align:center">可见性</td>
-<td style="text-align:left">数据在 URL 中对所有人都是可见的。</td>
-<td style="text-align:left">数据不会显示在 URL 中。</td>
-</tr>
-<tr>
-<td style="text-align:center">缓存</td>
-<td style="text-align:left">能被缓存</td>
-<td style="text-align:left">不能缓存</td>
-</tr>
-</tbody>
-</table>
+        <h2 id="CSRF介绍"><a href="#CSRF介绍" class="headerlink" title="CSRF介绍"></a>CSRF介绍</h2><p>CSRF（Cross-site request forgery）跨站请求伪造，是一种对网站的恶意利用。</p>
+<h2 id="CSRF攻击原理"><a href="#CSRF攻击原理" class="headerlink" title="CSRF攻击原理"></a>CSRF攻击原理</h2><p>1.用户C打开浏览器，访问受信任网站A，输入用户名和密码请求登录网站A；</p>
+<p>2.在用户信息通过验证后，网站A产生Cookie信息并返回给浏览器，此时用户登录网站A成功，可以正常发送请求到网站A；</p>
+<p>3.用户未退出网站A之前，在同一浏览器中，打开一个TAB页访问网站B；</p>
+<p>4.网站B接收到用户请求后，返回一些攻击性代码，并发出一个请求要求访问第三方站点A；</p>
+<p>5浏览器在接收到这些攻击性代码后，根据网站B的请求，在用户不知情的情况下携带Cookie信息，向网站A发出请求。网站A并不知道该请求其实是由B发起的，所以会根据用户C的Cookie信息以C的权限处理该请求，导致来自网站B的恶意代码被执行。</p>
+<p><img src="http://www.h3c.com.cn/res/201208/28/20120828_1395003_image001_751467_30008_0.jpg" alt="![img](http://www.h3c.com.cn/res/201208/28/20120828_1395003_image001_751467_30008_0.jpg)"></p>
+<h2 id="CSRF漏洞防御"><a href="#CSRF漏洞防御" class="headerlink" title="CSRF漏洞防御"></a>CSRF漏洞防御</h2><h3 id="服务端的防御"><a href="#服务端的防御" class="headerlink" title="服务端的防御"></a>服务端的防御</h3><h4 id="验证HTTP-Referer字段"><a href="#验证HTTP-Referer字段" class="headerlink" title="验证HTTP Referer字段"></a>验证HTTP Referer字段</h4><p>根据HTTP协议，在HTTP头中有一个字段叫Referer，它记录了该HTTP请求的来源地址。在通常情况下，访问一个安全受限页面的请求必须来自于同一个网站。比如某银行的转账是通过用户访问<a href="http://bank.test/test?page=10&amp;userID=101&amp;money=10000页面完成，用户必须先登录bank" target="_blank" rel="external">http://bank.test/test?page=10&amp;userID=101&amp;money=10000页面完成，用户必须先登录bank</a>. test，然后通过点击页面上的按钮来触发转账事件。当用户提交请求时，该转账请求的Referer值就会是转账按钮所在页面的URL（本例中，通常是以bank. test域名开头的地址）。而如果攻击者要对银行网站实施CSRF攻击，他只能在自己的网站构造请求，当用户通过攻击者的网站发送请求到银行时，该请求的Referer是指向攻击者的网站。因此，要防御CSRF攻击，银行网站只需要对于每一个转账请求验证其Referer值，如果是以bank. test开头的域名，则说明该请求是来自银行网站自己的请求，是合法的。如果Referer是其他网站的话，就有可能是CSRF攻击，则拒绝该请求。</p>
+<h4 id="在请求地址中添加token并验证"><a href="#在请求地址中添加token并验证" class="headerlink" title="在请求地址中添加token并验证"></a>在请求地址中添加token并验证</h4><p>CSRF攻击之所以能够成功，是因为攻击者可以伪造用户的请求，该请求中所有的用户验证信息都存在于Cookie中，因此攻击者可以在不知道这些验证信息的情况下直接利用用户自己的Cookie来通过安全验证。由此可知，抵御CSRF攻击的关键在于：在请求中放入攻击者所不能伪造的信息，并且该信息不存在于Cookie之中。鉴于此，系统开发者可以在HTTP请求中以参数的形式加入一个随机产生的token，并在服务器端建立一个拦截器来验证这个token，如果请求中没有token或者token内容不正确，则认为可能是CSRF攻击而拒绝该请求。</p>
+<h4 id="在HTTP头中自定义属性并验证"><a href="#在HTTP头中自定义属性并验证" class="headerlink" title="在HTTP头中自定义属性并验证"></a>在HTTP头中自定义属性并验证</h4><p>自定义属性的方法也是使用token并进行验证，和前一种方法不同的是，这里并不是把token以参数的形式置于HTTP请求之中，而是把它放到HTTP头中自定义的属性里。通过XMLHttpRequest这个类，可以一次性给所有该类请求加上csrftoken这个HTTP头属性，并把token值放入其中。这样解决了前一种方法在请求中加入token的不便，同时，通过这个类请求的地址不会被记录到浏览器的地址栏，也不用担心token会通过Referer泄露到其他网站。</p>
+<p>## </p>
 
       
     </div>
@@ -414,7 +366,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/html/" rel="tag"># html</a>
+            <a href="/tags/CSRF/" rel="tag"># CSRF</a>
           
         </div>
       
@@ -427,18 +379,14 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/24/CSRF保护/" rel="next" title="CSRF保护">
-                <i class="fa fa-chevron-left"></i> CSRF保护
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/05/03/遗传算法/" rel="prev" title="遗传算法">
-                遗传算法 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/05/27/对比POET和GET/" rel="prev" title="对比GET和POST">
+                对比GET和POST <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -559,7 +507,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP"><span class="nav-number">1.</span> <span class="nav-text">HTTP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#两种HTTP请求方法：GET和POST"><span class="nav-number">2.</span> <span class="nav-text">两种HTTP请求方法：GET和POST</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GET与POST的对比"><span class="nav-number">2.1.</span> <span class="nav-text">GET与POST的对比</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#CSRF介绍"><span class="nav-number">1.</span> <span class="nav-text">CSRF介绍</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSRF攻击原理"><span class="nav-number">2.</span> <span class="nav-text">CSRF攻击原理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSRF漏洞防御"><span class="nav-number">3.</span> <span class="nav-text">CSRF漏洞防御</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#服务端的防御"><span class="nav-number">3.1.</span> <span class="nav-text">服务端的防御</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#验证HTTP-Referer字段"><span class="nav-number">3.1.1.</span> <span class="nav-text">验证HTTP Referer字段</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在请求地址中添加token并验证"><span class="nav-number">3.1.2.</span> <span class="nav-text">在请求地址中添加token并验证</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在HTTP头中自定义属性并验证"><span class="nav-number">3.1.3.</span> <span class="nav-text">在HTTP头中自定义属性并验证</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
